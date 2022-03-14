@@ -1,0 +1,24 @@
+Lasso (L1) vs Ridge (L2):
+	- Lasso uses absolute weight 
+		- do well if there are a small number of significant parameters and the others are close to zero
+		- use when we want to remove unnecessary features
+		- i.e. [1,0,0,0] -> weight
+	- Ridge uses weight squared
+		- do well if there are many large parameters of about the same value
+		- use when we want to build a robust model
+		- i.e. [0.27,0.25,0.25,0.27] -> weight
+	
+Bagging vs Boosting:
+	- Bagging is when we divide datasets in to multiple bags (reduce variance) and then train them using various classifiers.
+	- Boosting is when we combined multiple weak learner in to one best learner
+	
+Bias vs Variance:
+	- straight line between data points -> high bias, low variance (underfit)
+	- squiggly line passing through data points -> low bias, high variance (overfit)
+
+AdaBoost vs XGBoost:
+	- both converting weak learners to a strong learner 
+	- AdaBoost -> reduce misclassifications 
+		- best for low noise, easy to work with (few hyperparameters), but poor performance(speed)
+	- XGBoost -> reduce residuals (distance from prediction to actual)
+		- high accuracies, very fast, but hard to work with (many hyperparameters)
